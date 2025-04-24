@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Sight Reading Practice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Music Sight Reading Practice</h1>
+    
+    <div class="mode-toggle">
+      <button id="single-note-mode" class="mode-btn active">Single Note</button>
+      <button id="sequence-mode" class="mode-btn">Note Sequence</button>
+    </div>
+    
+    <div class="midi-status">
+      <p id="midi-status-message">Waiting for MIDI device...</p>
+    </div>
+    
+    <div class="score-container">
+      <div id="score"></div>
+    </div>
+    
+    <div class="feedback-container">
+      <div id="feedback" class="feedback">Play the note shown above</div>
+    </div>
+    
+    <div class="controls">
+      <button id="new-note-btn">New Note</button>
+      <div class="settings">
+        <label>
+          <input type="checkbox" id="treble-clef" checked> Treble Clef
+        </label>
+        <label>
+          <input type="checkbox" id="bass-clef"> Bass Clef
+        </label>
+        <div id="sequence-settings" style="display: none;">
+          <label>
+            Sequence Length:
+            <select id="sequence-length">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+              <option value="6">6</option>
+              <option value="8">8</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stats">
+      <p>Correct: <span id="correct-count">0</span></p>
+      <p>Attempts: <span id="attempt-count">0</span></p>
+      <p>Accuracy: <span id="accuracy">0%</span></p>
+    </div>
+  </div>
+
+  <!-- VexFlow library -->
+  <script src="https://cdn.jsdelivr.net/npm/vexflow@4.2.2/build/cjs/vexflow.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

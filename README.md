@@ -132,6 +132,6 @@ This project is open source and available for educational and personal use.
 ---
 
 Created with ♪♫ for music education
-```
+
 
 
